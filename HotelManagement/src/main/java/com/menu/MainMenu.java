@@ -116,7 +116,7 @@ public class MainMenu {
             if (category != null) {
                 categotyName = category.getName();
             }
-            System.out.println("Id: " + room.getId() + " Name: " + room.getName() + " Category " + categotyName);
+            System.out.println("Id: " + room.getId() + " Name: " + room.getName() + " Price: " + room.getPrice() + " Category " + categotyName);
         }
     }
 

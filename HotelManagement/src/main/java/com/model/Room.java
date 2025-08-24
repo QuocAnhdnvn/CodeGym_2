@@ -3,14 +3,14 @@ package com.model;
 public class Room {
     private String name;
     private Long id;
-    private String author;
+    private int price;
     private static Long categoryId;
     private static Long countId = 1000L;
 
-    public Room(String name, String author, Long categoryId) {
+    public Room(String name, int price, Long categoryId) {
         this.id = countId;
         this.name = name;
-        this.author = author;
+        this.price = price;
         this.categoryId = categoryId;
         countId++;
     }
@@ -31,12 +31,12 @@ public class Room {
         this.id = id;
     }
 
-    public String getAuthor() {
-        return author;
+    public int getPrice() {
+        return price;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setPrice(int price) {
+        this.price = price;
     }
 
     public Long getCategoryId() {

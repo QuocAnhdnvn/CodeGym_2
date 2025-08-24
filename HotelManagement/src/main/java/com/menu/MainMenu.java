@@ -89,10 +89,10 @@ public class MainMenu {
         int choice;
         do {
             System.out.println("------------------------Room Menu------------------------");
-            System.out.println("1. Thêm sách");
+            System.out.println("1. Thêm phòng");
             System.out.println("2. Hiển thị tất cả");
-            System.out.println("3. Chi tiết sách");
-            System.out.println("4. Xoá sách");
+            System.out.println("3. Chi tiết phòng");
+            System.out.println("4. Xoá phòng");
             System.out.println("0. Thoát");
             System.out.println("Vui lòng nhập lựa chọn của bạn");
             choice = Input.inputInt();
@@ -134,8 +134,8 @@ public class MainMenu {
         System.out.println("---------- Add Room Menu --------");
         System.out.println("Nhập tên: ");
         String name = Input.inputString();
-        System.out.println("Nhập tác giả: ");
-        String author = Input.inputString();
+        System.out.println("Nhập giá: ");
+        int price = Input.inputInt();
         // Show list option for categories;
         List<Category> categories = categoryManagement.findAll();
         System.out.println("Danh sách category");
@@ -145,7 +145,7 @@ public class MainMenu {
         System.out.println("Vui lòng nhập ID loại phòng");
         Long categoryId = (long) Input.inputInt();
         // Kiểm tra category người dùng nhập vào có tồn tại hay không
-        Room room = new Room(author, name, categoryId);
+        Room room = new Room(name, price, categoryId);
         roomManagement.add(room);
         System.out.println("Thêm thành công");
     }

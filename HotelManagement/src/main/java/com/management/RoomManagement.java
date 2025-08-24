@@ -1,5 +1,6 @@
 package com.management;
 
+import com.dto.RoomDatabase;
 import com.model.Room;
 
 import java.util.ArrayList;
@@ -7,6 +8,8 @@ import java.util.List;
 
 public class RoomManagement implements IManagement<Room> {
     private List<Room> list;
+    private RoomDatabase roomDatabase = new RoomDatabase();
+
 
     public RoomManagement(){
         this.list = new ArrayList<>();
